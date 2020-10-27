@@ -1,0 +1,25 @@
+1) Mediante un botón crear un alert que diga “Hola Mundo”.
+2) Mediante un botón sumar dos números y mostrarlo en un alert.
+3) Mediante un botón mostrar por consola el mensaje “Hola Mundo”.
+4) En un tag de HTML <p>Hola Mundo</p> al pasar el puntero del
+mouse por el texto, este debe cambiar a color rojo.
+5) Permitir que el usuario ingrese dos números y mediante un botón
+muestre la suma de ambos
+6) Crear un botón que muestre 10 números aleatorios, mostrar por
+pantalla.
+7) Crear 3 botones, con el nombre “Rojo”, “Azul”, “Amarillo”. Colocar el
+texto “Colores” y que al apretar cualquiera de los botones el texto
+cambie al color correspondiente.
+8) Solicitar por pantalla que el usuario ingrese nombre y apellido, al
+apretar un botón que muestre por pantalla un saludo “Hola nombre,
+apellido”.
+9) Solicitar por pantalla el año de nacimiento del usuario y calcular
+cuantos años tiene. Mostrar por pantalla.
+10) Crear 3 radio buttons (opcion 1, opcion 2, opcion 3) y al hacer click
+en cada uno que muestre su valor correspondiente.
+
+===================================
+
+async y defer indican al navegador que descargue los scripts en un hilo separado, mientras que el resto de la página (el DOM, etc.) se descarga, por lo que los scripts no bloquean la carga de la página.
+Si tus scripts se deben ejecutar inmediatamente y no tienen ninguna dependencia, utiliza async.
+Si tus scripts necesitan esperar a ser procesados y dependen de otros scripts y/o del DOM en su lugar, cárgalos usando defery coloca tus elementos <script> correspondientes en el orden que desees que el navegador los ejecute.
