@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <button id="b1" onclick="showMessage()"> Mensaje </button><br>
+    1er valor <input type="number" id="ip2"> 
+    2do valor <input type="number" id="ip1">
+    <button id="b2" onclick="suma()"> Sumar </button>
+</body>
+
+<script type="text/javascript">
+    var ip1 = document.getElementById('ip1').nodeValue;
+    var ip2 = document.getElementById('ip2').nodeValue;
+
+    btn2.addEventListener('click', suma());
+
+    function showMessage(){
+    alert("Hola Mundo");
+    }
+
+    function suma(){
+    alert(ip1 + ip2);
+    }
+</script>
+</html>
