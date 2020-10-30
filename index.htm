@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
+
     <!-- Ejercicio 1 -->
     <button id="b1" onclick="showMessage()"> Mensaje </button><br>
     <!-- Ejercicio 2 -->
@@ -27,7 +28,17 @@
     <button onclick="pintar('red', 'p2')">ROJO</button> 
     <button onclick="pintar('blue', 'p2')">AZUL</button> 
     <button onclick="pintar('yellow', 'p2')">AMARILLO</button>
-    
+
+    <!-- Ejercicio 8 -->
+    Nombre<input type="text" id="nombre">
+    Apellido<input type="text" id="apel">
+    <button onclick="saludar('nombre', 'apel')">Saludar</button>
+    <p id="p3"></p>
+
+    <!-- Ejercicio 9 -->
+    Año de nacimiento <input type="date" id="ageinp">
+    <button onclick="edad('ageinp')">Calcular edad</button>
+    <div id="agediv">EDAD : </div>
 
 </body>
 
@@ -58,6 +69,21 @@
     function pintar(color, pp){
         e = document.getElementById(pp);
         e.style.color = color;
+    }
+
+    function saludar(n, a) {
+        nombre = document.getElementById(n).value;
+        apel = document.getElementById(a).value;
+        if (!nombre.length == 0 && !apel.length == 0) {
+            document.getElementById("p3").innerHTML = "Hola " + nombre +" "+ apel +"!!";
+        }
+    }
+
+    function edad(e) {
+        console.log(e);
+        f_nac = parseInt(document.getElementById(e).value);
+        
+
     }
 
 
