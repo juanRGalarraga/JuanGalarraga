@@ -7,24 +7,60 @@
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
+    <!-- Ejercicio 1 -->
     <button id="b1" onclick="showMessage()"> Mensaje </button><br>
+    <!-- Ejercicio 2 -->
+    <button id="b2" onclick="showSuma()"> 5 + 3 </button><br>
+    <!-- Ejercicio 3 -->
+    <button onclick="showMessageConsola()"> Mostrar mensaje en consola </button>
+    <!-- Ejercicio 4 -->
+    <p id="pp" onmouseover="pintar('red', 'pp')" onmouseout="pintar('black', 'pp')">HOLA MUNDO ROJO</p>
+    <!-- Ejercicio 5 -->
     1er valor <input type="number" id="ip2"> 
-    2do valor <input type="number" id="ip1">
-    <button id="b2" onclick="suma()"> Sumar </button>
+    2do valor <input type="number" id="ip1"> <br>
+    <button id="b3" onclick="getData();"> Sumar </button><br>
+    <!-- Ejercicio 6 -->
+    <button onclick="randomNumbers()">Mostrar numeros aleatorios</button>
+
+    <!-- Ejercicio 7 -->
+    <p id="p2">COLORES</p>
+    <button onclick="pintar('red', 'p2')">ROJO</button> 
+    <button onclick="pintar('blue', 'p2')">AZUL</button> 
+    <button onclick="pintar('yellow', 'p2')">AMARILLO</button>
+    
+
 </body>
 
 <script type="text/javascript">
-    var ip1 = document.getElementById('ip1').nodeValue;
-    var ip2 = document.getElementById('ip2').nodeValue;
-
-    btn2.addEventListener('click', suma());
 
     function showMessage(){
     alert("Hola Mundo");
     }
 
-    function suma(){
-    alert(ip1 + ip2);
+    function showSuma() {
+        alert(8);
     }
+
+    function getData() {
+        var ip1 = parseInt(document.getElementById("ip1").value); 
+        var ip2 = parseInt(document.getElementById("ip2").value); 
+        result = ip1 + ip2;
+        if (!result) {
+            return;
+        }
+        alert ("Resultado de la suma: " + result);
+    }
+
+    function showMessageConsola(){
+        console.log("Hola mundo");
+    }
+
+    function pintar(color, pp){
+        e = document.getElementById(pp);
+        e.style.color = color;
+    }
+
+
+
 </script>
 </html>
