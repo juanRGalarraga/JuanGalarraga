@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Ejercicio 1 -->
+    <button id="b1" onclick="showMessage()"> Mensaje </button><br>
+    <!-- Ejercicio 2 -->
+    <button id="b2" onclick="showSuma()"> 5 + 3 </button><br>
+    <!-- Ejercicio 3 -->
+    <button onclick="showMessageConsola()"> Mostrar mensaje en consola </button>
+    <!-- Ejercicio 4 -->
+    <p id="pp" onmouseover="pintar('red', 'pp')" onmouseout="pintar('black', 'pp')">HOLA MUNDO ROJO</p>
+    <!-- Ejercicio 5 -->
+    1er valor <input type="number" id="ip2"> 
+    2do valor <input type="number" id="ip1"> <br>
+    <button id="b3" onclick="getData();"> Sumar </button><br>
+    <!-- Ejercicio 6 -->
+    <button onclick="random()" id="ejercicio6">Mostrar numeros aleatorios</button>
+    <p id="showNumbers"></p>
+    <!-- Ejercicio 7 -->
+    <p id="p2">COLORES</p>
+    <button onclick="pintar('red', 'p2')">ROJO</button> 
+    <button onclick="pintar('blue', 'p2')">AZUL</button> 
+    <button onclick="pintar('yellow', 'p2')">AMARILLO</button>
+
+    <!-- Ejercicio 8 -->
+    Nombre<input type="text" id="nombre">
+    Apellido<input type="text" id="apel">
+    <button onclick="saludar('nombre', 'apel')">Saludar</button>
+    <p id="p3"></p>
+
+    <!-- Ejercicio 9 -->
+    Año de nacimiento <input type="date" id="fecha_nacimiento" value="2000-06-21" name="fecha_nacimiento">
+    <button onclick="edad()">Calcular edad</button>
+    <div id="agediv">EDAD : </div>
+
+    <!-- Ejercicio 10 -->
+    Valor 1 <input type="radio" value="valor 1" onclick="MostrarValor(this);"  name="radiobutton" id="radio"><br>
+
+    Valor 2 <input type="radio" value="valor 2" onclick="MostrarValor(this);" name="radiobutton" id="radio"><br>
+
+    Valor 3 <input type="radio" value="valor 3" onclick="MostrarValor(this);" name="radiobutton" id="radio"><br>
+
+    <span id="text-radio">VALOR:  </span>
+</body>
+</html>
