@@ -24,7 +24,7 @@
 
 <script type="text/javascript">
 
-//Recibe un valor y devuelve una lista
+//Recibe un valor y responde con una lista
 function getProvincias(v){
         var xhr = new XMLHttpRequest();
         var url = "getProv.php";
@@ -55,7 +55,7 @@ function getProvincias(v){
 
         //Bucle que crea los nodos hijos según la cantidad de elementos que reciba.        
         var max = lista.length;
-        for (var i = 0; i<=max; i++){
+        for (var i = 0; i<max; i++){
             var opt = document.createElement('option');
             opt.innerHTML = lista[i];
             select.appendChild(opt);
