@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+        <form action="POST">
+            Pais
+            <select onchange="getProvincias(value)" id="paises">
+                <option disabled selected>Selecciona un país</option>
+                <option value="arg">Argentina</option>
+                <option value="uru">Uruguay</option>
+            </select>
+        </form>
+        
+        Provincias
+        <select name="list-provincias" id="list-provincias">
+           
+        </select>
+</body>
+</html>
+
+<script type="text/javascript">
+
+//Recibe un valor y devuelve una lista
+function getProvincias(v){
+        var xhr = new XMLHttpRequest();
+        var url = "getProv.php";
+        var params = "pais="+v;
+        var provincias= [];
+
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                provincias = JSON.parse(xhr.response);
+                //llama a la funcion que crea los nodos "option" en el DOM.
+                appenOption(provincias); //Le paso la lista de provincias parseadas.
+            }  
+        }
+        xhr.send(params);
+    }    
+    
+    function appenOption(lista){
+        //Obtengo el id del elemento que contendrá la lista.
+        var select = document.getElementById('list-provincias');
+        //Pregunto si tiene elementos. Si es así, que vacíe. 
+        if (select.length > 0){
+            while (select.firstChild) {
+                select.removeChild(select.firstChild);
+            }
+        }
+
+        //Bucle que crea los nodos hijos según la cantidad de elementos que reciba.        
+        var max = lista.length;
+        for (var i = 0; i<=max; i++){
+            var opt = document.createElement('option');
+            opt.innerHTML = lista[i];
+            select.appendChild(opt);
+        }
+    }
+    
+</script>
+
