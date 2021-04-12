@@ -1,9 +1,9 @@
 <?php
 
 namespace Database\Seeders;
-use Illuminate\Support\Facades\DB;
 
 use Illuminate\Database\Seeder;
+use App\Models\Auto;
 
 class AutoSeeder extends Seeder
 {
@@ -13,10 +13,7 @@ class AutoSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   
-        DB::table('autos')->insertGetId(
-            ['color' => 'Rojo', 'marca' => 'Zanella']
-        );
-        // DB::table('autos')->truncate();
+    {
+        Auto::factory(20)->create();
     }
 }
