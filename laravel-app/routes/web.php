@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AutoController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class);
+Route::get('/autos', [AutoController::class, 'index']);
+Route::get('/autos/create', [AutoController::class, 'create']);
+Route::get('/autos/{nombre}', [AutoController::class, 'show']);
+
+
+
+
