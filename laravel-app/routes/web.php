@@ -15,9 +15,13 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', HomeController::class);
+
+//Auto
 Route::get('/autos', [AutoController::class, 'index']);
 Route::get('/autos/create', [AutoController::class, 'create']);
 Route::get('/autos/{nombre}', [AutoController::class, 'show']);
+
+
 
 
 
