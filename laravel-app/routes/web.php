@@ -16,12 +16,11 @@ use App\Http\Controllers\ItemController;
 */
 
 Route::get('/', HomeController::class);
-
-Route::get('/items', [ItemController::class, 'index'])->name('items.index');
+Route::get('/items', [ItemController::class, 'index'])->name('item.index');
 Route::get('/items/{id}', [ItemController::class, 'show'])->name('item.show');
-Route::post('/items/create', [ItemController::class, 'create'])->name('items.create');
-Route::put('/items/{id}/update', [ItemController::class, 'update'])->name('items.update');
-Route::delete('/items/{id}/delete', [ItemController::class, 'delete'])->name('items.delete');
+Route::post('/items/create', [ItemController::class, 'create'])->name('item.create');
+Route::put('/items/{id}/update', [ItemController::class, 'update'])->name('item.update');
+Route::delete('/items/{id}/delete', [ItemController::class, 'delete'])->name('item.delete');
 
 
 

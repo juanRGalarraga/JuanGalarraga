@@ -23,19 +23,17 @@ class ItemController extends Controller
 
     public function store(Request $request){
         Item::create($request->all());
-        return redirect()->route('item')
-                         ->with('success', 'El registro ha sido creado');
+        return view('item');
     }
 
     public function update(Request $request){
         Item::saved($request->all());
-        return redirect()->route('item')
-                         ->with('success', 'El registro ha sido modificado');
+        return view('item');    
     }
 
-    public function destroy(Item $item){
+    public function delete(Item $item){
         $item->delete();
-        return redirect()->route('item')
+        return redirect()->route('item.index')
                          ->with('success', 'El registro ha sido eliminado');
     }
 }
