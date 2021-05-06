@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutoController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ItemController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,11 +17,11 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', HomeController::class);
 
-//Auto
-Route::get('/autos', [AutoController::class, 'index']);
-Route::get('/autos/create', [AutoController::class, 'create']);
-Route::get('/autos/{nombre}', [AutoController::class, 'show']);
-
+Route::get('/items', [ItemController::class, 'index'])->name('items.index');
+Route::get('/items/{id}', [ItemController::class, 'show'])->name('item.show');
+Route::post('/items/create', [ItemController::class, 'create'])->name('items.create');
+Route::put('/items/{id}/update', [ItemController::class, 'update'])->name('items.update');
+Route::delete('/items/{id}/delete', [ItemController::class, 'delete'])->name('items.delete');
 
 
 

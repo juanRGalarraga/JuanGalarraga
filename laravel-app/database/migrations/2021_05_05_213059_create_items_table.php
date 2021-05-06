@@ -18,9 +18,9 @@ class CreateItemsTable extends Migration
             $table->string("item");
             $table->char("unidad", 10);
             $table->integer("cantidad");
-            $table->float("importe_materiales");
-            $table->float("importe_mano_obra");
-            $table->float("total");
+            $table->decimal("importe_materiales");
+            $table->decimal("importe_mano_obra");
+            $table->decimal("total");
             $table->timestamps();
         });
     }
