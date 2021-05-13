@@ -3,8 +3,9 @@
 @section('title', "Listado de items")
 
 @section('content')
-    <a class="btn btn-success" href="{{ route('item.create') }}"> Crear un nuevo item</a>
     <div class="row">
+        <a class="btn btn-success" href="{{ route('items.create') }}"/> Crear un nuevo item</a>
+
         <table class="table table-bordered border-primary">
             <thead>
                 <tr>
@@ -15,7 +16,7 @@
                     <th scope="col">Importe materiales</th>
                     <th scope="col">Importe mano de obra</th>
                     <th scope="col">Total</th>
-                    <th>Editar</th>
+                    <th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,8 +30,8 @@
                     <td>{{ $item->importe_mano_obra }}</td>
                     <td>{{ $item->total }}</td>
                     <td>
-                        <form action="{{ route('item.delete',$item) }}" method="POST">   
-                            <a class="btn btn-info" href="{{ route('item.show',$item->id) }}">Mostrar</a>    
+                        <form action="{{ route('items.delete',$item) }}" method="POST">   
+                            <a class="btn btn-info" href="{{ route('items.show',$item) }}">Mostrar</a>    
                             @csrf
                             @method('DELETE')      
                             <button type="submit" class="btn btn-danger">Borrar</button>

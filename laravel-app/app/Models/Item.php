@@ -12,8 +12,11 @@ class Item extends Model
         'id', 
         'item', 
         'unidad', 
+        'cantidad',
         'importe_materiales', 
         'importe_mano_obra', 
-        'total'
+        'total',
+        'updated_at',
+        'created_at',
     ];
 }

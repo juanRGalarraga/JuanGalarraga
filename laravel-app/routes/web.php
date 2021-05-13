@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AutoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
 /*
@@ -14,15 +13,14 @@ use App\Http\Controllers\ItemController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', HomeController::class);
-Route::get('/items', [ItemController::class, 'index'])->name('item.index');
-Route::get('/items/{id}', [ItemController::class, 'show'])->name('item.show');
-Route::post('/items/create', [ItemController::class, 'create'])->name('item.create');
-Route::put('/items/{id}/update', [ItemController::class, 'update'])->name('item.update');
-Route::delete('/items/{id}/delete', [ItemController::class, 'delete'])->name('item.delete');
+Route::get('/items', [ItemController::class, 'index'])->name('items.index');
+Route::get('/items', [ItemController::class, 'index'])->name('items.index');
+Route::post('/items', [ItemController::class, 'store'])->name('items.store');
+Route::get('/items/create', [ItemController::class, 'create'])->name('items.create');
+Route::get('/items/{item}', [ItemController::class, 'show'])->name('items.show');
 
-
-
+Route::put('/items/{item}/update', [ItemController::class, 'update'])->name('items.update');
+Route::delete('/items/{item}/delete', [ItemController::class, 'delete'])->name('items.delete');
 
 
