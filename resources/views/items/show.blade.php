@@ -8,7 +8,7 @@
             @method('PUT')
             <div class="card">
                 <div class="card-header">
-                    <h3>{{ $item->item }}</h3>
+                    <h3>Editar item: <b>{{ $item->item }}</b></h3>
                 </div>
                 <div class="card-body">
                     <div class="form-group">
@@ -29,8 +29,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Costo mano de obra</label>
-                        <input type="text" class="form-control" name="importe_mano_obra" value="{{ 
-                    $item->importe_mano_obra }}">
+                        <input type="text" class="form-control" name="importe_mano_obra" value="{{ $item->importe_mano_obra }}">
                     </div>
                     <div class="form-group">
                         <label for="">Total</label>

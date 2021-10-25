@@ -29,14 +29,12 @@ class ItemController extends Controller
     }
 
     public function update(Request $request, Item $item){
-        // dd($request->all());
         $item->update($request->all());
         return redirect()->route('items.show', $item);
     }
 
     public function delete(Item $item){
         $item->delete();
-        return redirect()->route('items.index')
-                         ->with('success', 'El registro ha sido eliminado');
+        return redirect()->route('items.index');
     }
 }
